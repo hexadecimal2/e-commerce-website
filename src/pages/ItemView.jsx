@@ -3,6 +3,7 @@ import Sidebar from '../components/Sidebar';
 import Bag from '../components/Bag';
 import { useLocation, Link } from 'react-router-dom';
 import '../pages/ItemView.css'
+import Rating from '../components/Rating'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -52,19 +53,30 @@ const ItemView = () => {
                                         <div className='details'>
                                             <h1> {data.name} </h1>
                                             <h2> {data.smallDescription}</h2>
-                                            <h3> rating </h3>
-                                            <h3> {data.price} </h3>
-                                            <p>{data.description}</p>
-                                            
+                                            <h3><Rating stars={data.rating}/> <span> {data.rating} / 5 </span> </h3>
+                                            <h4> ${data.price} </h4>
+                                            <p> <strong>{data.description} </strong></p>
+
+                                            <div className='button'>
+                                            <button type='button'> Add to Bag </button>
+                                            </div>
+
+
                                         </div>
                                     
+                                     
+
                                     </div>
                                         
                                     
                                     
                                     <div className='contentBottom'>
+                                        
+                                        <hr />
+                                        
                                         <div className='description'>
                                             <h2> Description </h2>
+                                            <hr />
                                             <p> {data.description} </p>
                                         </div>
 

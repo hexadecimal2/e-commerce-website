@@ -35,7 +35,6 @@ padding-bottom: 20px;
 
 }
 
-
 .bigImg {
     width: 300px;
     height: 300px;
@@ -49,6 +48,42 @@ padding-bottom: 20px;
     height: 300px;  
 }
 
+.contentTop .details h3 {
+    color: #12805D;
+    
+}
+
+.contentBottom .description{
+    margin-top: 20px;
+}
+
+.contentBottom hr{
+    border: 2px solid black;
+}
+
+.contentBottom .description hr{
+    width: 20%;
+    margin-left: 10px;
+}
+
+.contentBottom .description h2{
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+.contentBottom .description p{
+    margin-left: 10px;
+    
+}
+
+
+.contentTop .details h3 span {
+    font-size: 15px;
+}
+
+.contentTop .details .button {
+    margin-left: 65%;    
+}
 
 
 
@@ -68,3 +103,5 @@ a{
     margin-bottom: 15px;
   
 }
+
+
