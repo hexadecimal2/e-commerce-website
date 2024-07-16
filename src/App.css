@@ -28,3 +28,8 @@ background-color: #ededed;
 }
 
 /* Dont remove============================ */
+
+.card{
+  padding: 8px;
+  border: none !important;
+}

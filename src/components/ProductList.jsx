@@ -12,7 +12,7 @@ import dellXpsWhite from '../assets/dell-xps-13-white.png';
 import iphone11Blue from '../assets/iphone-12-pro-blue.png';
 import macbook from '../assets/macbook.png';
 import samsungNote21 from '../assets/samsung-note21.png';
-
+import '../App.css';
 const ProductList = () => {
     const navigate = useNavigate();
     const products = [
@@ -135,9 +135,9 @@ const ProductList = () => {
             <div className='container'>
             <div className='row'>
                 {products.map(product => (
-                    <div key={product.id} className='col-lg-3 col-md-4 col-sm-6 mb-4'>
-                        <div className='card border-0 bg-transparent' onClick={() => handleItemView(product)}>
-                            <img src={product.image} alt={product.name} className="card-image mx-auto d-block" height='230' width='190' />
+                    <div key={product.id} className='col-lg-3 col-md-4 col-sm-6 mb-4 '>
+                        <div className='card border-none' style={ { backgroundColor: '#ededed' } } onClick={() => handleItemView(product)}>
+                            <img src={product.image} alt={product.name} className="bg-white bg-rounded mx-auto d-block" height='230' width='190' />
                             <div className="card-content d-flex flex-column">
                                 <div className="card-title">{product.name}</div>
                                 <div className="card-description">{product.smallDescription}</div>
