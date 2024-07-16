@@ -4,7 +4,7 @@ const AddAddress = () => {
     return (
         <>
          {/* Someone's section */}
-         Form for adding address
+         <div>Form for adding address</div>
         </>
     );
 };

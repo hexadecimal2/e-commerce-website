@@ -4,7 +4,7 @@ const AddPayment = () => {
     return (
         <>
         {/* Keitumetse's section */}
-        Form
+        <div>Form</div> 
         </>
     );
 };

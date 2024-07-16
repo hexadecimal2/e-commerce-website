@@ -4,7 +4,7 @@ const Sidebar = () => {
     return (
         <>
         {/* Kgomotso's section */}
-            Sidebar section
+            <div>Sidebar section</div> 
         </>
     );
 };

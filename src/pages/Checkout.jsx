@@ -8,7 +8,7 @@ const Checkout = () => {
         {/* Neos section */}
         {/* Take information from shipping address user input */}
         {/* Take information from add payment user input */}
-        Review Your Bag Section
+        <div>Review Your Bag Section</div> 
         <OrderSummary />
         </>
     );

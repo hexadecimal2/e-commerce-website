@@ -7,7 +7,7 @@ const BagItems = () => {
         <>
         {/* Siya's section */}
             <Sidebar />
-            Check Your Bag Items
+            <div>Check Your Bag Items</div> 
             <Bag />
         </>
     );

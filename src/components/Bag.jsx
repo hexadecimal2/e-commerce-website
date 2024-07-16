@@ -4,7 +4,7 @@ const Bag = () => {
     return (
         <>
         {/* Palesa's section */}
-         Bag section
+         <div>Bag section</div>
         </>
     );
 };

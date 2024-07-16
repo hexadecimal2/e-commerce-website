@@ -7,7 +7,7 @@ const ItemView = () => {
         <>
             {/* Joshua's section */}
             <Sidebar />
-            Product details
+            <div>Product details</div> 
             <Bag />
         </>
     );
