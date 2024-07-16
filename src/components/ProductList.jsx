@@ -22,7 +22,7 @@ const ProductList = () => {
             smallDescription: "Series 5 SE",
             description : 'Stay connected and active with the Apple Watch Series 5 SE, featuring advanced health tracking and customizable watch faces.',
             price: 529.99,
-            rating: 4.5
+            rating: 4
         },
         {
             id: 2,
@@ -40,7 +40,7 @@ const ProductList = () => {
             smallDescription: "Serious Black",
             description : 'The iPhone 11 in Serious Black offers stunning photos, powerful performance, and all-day battery life.',
             price: 619.99,
-            rating: 4.5
+            rating: 4
         },
         {
             id: 4,
@@ -49,7 +49,7 @@ const ProductList = () => {
             smallDescription: "Subway Blue",
             description : 'Enjoy the sleek design and robust features of the iPhone 11, now available in the eye-catching Subway Blue.',
             price: 619.99,
-            rating: 4.5
+            rating: 4
         },
         {
             id: 5,
@@ -58,7 +58,7 @@ const ProductList = () => {
             smallDescription: "Product RED",
             description : 'Make a statement with the iPhone 11 in Product RED, combining cutting-edge technology with a bold color.',
             price: 619.99,
-            rating: 4.5
+            rating: 4
         },
         {
             id: 6,
@@ -67,7 +67,7 @@ const ProductList = () => {
             smallDescription: "Milky White",
             description : 'The iPhone 11 in Milky White provides a clean, classic look with the power and performance you expect from Apple.',
             price: 619.99,
-            rating: 4.5
+            rating: 4
         },
         {
             id: 7,
@@ -76,7 +76,7 @@ const ProductList = () => {
             smallDescription: "Product RED",
             description : 'Upgrade to the iPhone 13 in Product RED for enhanced performance, stunning camera capabilities, and vibrant design.',
             price: 619.99,
-            rating: 4.5
+            rating: 4
         },
         {
             id: 8,
@@ -102,7 +102,7 @@ const ProductList = () => {
             smallDescription: "Navy Blue",
             description : 'The iPhone 11 in Navy Blue combines elegance and functionality, providing a seamless user experience with impressive features.',
             price: 729.99,
-            rating: 4.5
+            rating: 4
         },
         {
             id: 11,
