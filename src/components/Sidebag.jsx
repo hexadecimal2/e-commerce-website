@@ -1,7 +1,7 @@
 import React from "react";
-import { data } from "../components/ProductList.jsx";
+import ProductList from "./ProductList.jsx";
 import { Link } from 'react-router-dom';
-import "../components/Sidebag.css"
+import "./Sidebag.css"
 
 export let myBag = [];
 let setMyBag = () => { };

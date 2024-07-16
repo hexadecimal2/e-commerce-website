@@ -1,7 +1,7 @@
 import React from "react";
-import { data } from "./components/ProductList";
+import ProductList from "./ProductList.jsx";
 import { useNavigate } from 'react-router-dom';
-import "./sidebag.css"
+import "./Sidebag.css"
 //Palesa's section with sidebag and bag.css
 
 export let myBag = [];
