@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -21,6 +20,7 @@ const ProductList = () => {
             image: appleWatch,
             name: "Apple Watch",
             smallDescription: "Series 5 SE",
+            description : 'Stay connected and active with the Apple Watch Series 5 SE, featuring advanced health tracking and customizable watch faces.',
             price: 529.99,
         },
         {
@@ -28,6 +28,7 @@ const ProductList = () => {
             image: headphones,
             name: "Sony ZX33OBT",
             smallDescription: "Light Grey",
+            description : 'Experience wireless freedom and superior sound quality with the light grey Sony ZX33OBT headphones.',
             price: 39.99,
         },
         {
@@ -35,6 +36,7 @@ const ProductList = () => {
             image: iphone11Black,
             name: "iPhone 11",
             smallDescription: "Serious Black",
+            description : 'The iPhone 11 in Serious Black offers stunning photos, powerful performance, and all-day battery life.',
             price: 619.99,
         },
         {
@@ -42,6 +44,7 @@ const ProductList = () => {
             image: iphone11Green,
             name: "iPhone 11",
             smallDescription: "Subway Blue",
+            description : 'Enjoy the sleek design and robust features of the iPhone 11, now available in the eye-catching Subway Blue.',
             price: 619.99,
         },
         {
@@ -49,6 +52,7 @@ const ProductList = () => {
             image: iphone11Red,
             name: "iPhone 11",
             smallDescription: "Product RED",
+            description : 'Make a statement with the iPhone 11 in Product RED, combining cutting-edge technology with a bold color.',
             price: 619.99,
         },
         {
@@ -56,6 +60,7 @@ const ProductList = () => {
             image: iphone11White,
             name: "iPhone 11",
             smallDescription: "Milky White",
+            description : 'The iPhone 11 in Milky White provides a clean, classic look with the power and performance you expect from Apple.',
             price: 619.99,
         },
         {
@@ -63,6 +68,7 @@ const ProductList = () => {
             image: iphone11Red,
             name: "iPhone 13",
             smallDescription: "Product RED",
+            description : 'Upgrade to the iPhone 13 in Product RED for enhanced performance, stunning camera capabilities, and vibrant design.',
             price: 619.99,
         },
         {
@@ -70,6 +76,7 @@ const ProductList = () => {
             image: iphone11Red,
             name: "iPhone 14",
             smallDescription: "Product RED",
+            description : 'The latest iPhone 14 in Product RED delivers unmatched performance, cutting-edge features, and a striking design.',
             price: 619.99,
         },
         {
@@ -77,6 +84,7 @@ const ProductList = () => {
             image: dellXpsWhite,
             name: "Dell XPS 13",
             smallDescription: "White",
+            description : 'The Dell XPS 13 in white offers a premium laptop experience with a stunning display, powerful performance, and sleek design.',
             price: 1799.99,
         },
         {
@@ -84,6 +92,7 @@ const ProductList = () => {
             image: iphone11Blue,
             name: "iPhone 11",
             smallDescription: "Navy Blue",
+            description : 'The iPhone 11 in Navy Blue combines elegance and functionality, providing a seamless user experience with impressive features.',
             price: 729.99,
         },
         {
@@ -91,6 +100,7 @@ const ProductList = () => {
             image: macbook,
             name: "Macbook",
             smallDescription: "Macbook Air",
+            description : 'The Macbook Air is the perfect blend of performance and portability, featuring a stunning Retina display and advanced technology.',
             price: 3799.99,
         },
         {
@@ -98,12 +108,14 @@ const ProductList = () => {
             image: samsungNote21,
             name: "Samsung Note 21",
             smallDescription: "Violet",
+            description : 'Stay productive and creative on the go with the Samsung Note 21 in Violet, featuring a powerful S Pen and vibrant display.',
             price: 319.99,
         }
     ];
 
     const handleItemView = (product) => {
-    navigate('/item-view', {state: {product} });
+
+       navigate('/item-view', {state: {product} });
     };
 
     return (
