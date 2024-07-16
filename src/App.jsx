@@ -5,11 +5,13 @@ import BagItems from './pages/CheckBagItems';
 import Checkout from './pages/Checkout'
 import AddPayment from './pages/AddPayment';
 import AddAddress from './pages/AddAddress';
+
 import './App.css';
 
 function App() {
   return (
     <BrowserRouter>
+         <div className="App">
       <Routes>
         <Route path='/' element={<Dashboard />} />
         <Route path='/item-view' element={<ItemView />} />
@@ -18,6 +20,7 @@ function App() {
         <Route path='/payment' element={<AddPayment />} />
         <Route path='/address' element={<AddAddress />} />
       </Routes>
+      </div>
     </BrowserRouter>
   );
 }
