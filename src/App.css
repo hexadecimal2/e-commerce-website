@@ -33,3 +33,16 @@ background-color: #ededed;
   padding: 8px;
   border: none !important;
 }
+
+
+.line {
+  width: 4px; /* Thickness of the line */
+  height: 1130px; /* Length of the line */
+  background: rgb(139, 139, 139);
+  position: relative;
+  right: 150px;
+  top: -150px;
+}
+.vert-line{
+  padding: 120px;
+}

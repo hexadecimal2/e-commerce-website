@@ -4,12 +4,12 @@ import Bag from '../components/Bag';
 
 const BagItems = () => {
     return (
-        <>
+        <div className='check'>
         {/* Siya's section */}
             <Sidebar />
             <div>Check Your Bag Items</div> 
             <Bag />
-        </>
+        </div>
     );
 };
 
