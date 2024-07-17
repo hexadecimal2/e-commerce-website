@@ -155,8 +155,8 @@ const ProductList = () => {
                 {filteredProducts.length > 0 ? (
                 filteredProducts.map(product => (
                     <div key={product.id} className='col-lg-3 col-md-12 col-sm-12 mb-4'>
-                        <div className='card border-0 bg-transparent' onClick={() => handleItemView(product)}>
-                            <img src={product.image} alt={product.name} className="card-image mx-auto d-block" height='230' width='190' />
+                        <div className='card border-0 bg-transparent' >
+                            <img src={product.image} alt={product.name} className="card-image mx-auto d-block" height='230' width='190' onClick={() => handleItemView(product)} />
                             <div className="card-content d-flex flex-column">
                                 <div className="card-title">{product.name}</div>
                                 <div className="card-description">{product.smallDescription}</div>
