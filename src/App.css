@@ -39,9 +39,9 @@ background-color: #ededed;
   width: 4px; /* Thickness of the line */
   height: 1130px; /* Length of the line */
   background: rgb(139, 139, 139);
-  position: relative;
-  right: 130px;
-  top: -150px;
+  position: absolute;
+  left: 84rem;
+  top: -10px;
 }
 .vert-line{
   padding: 120px;
