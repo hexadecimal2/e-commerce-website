@@ -16,7 +16,7 @@
   align-items: center;
   margin: 10px;
   border-radius: 10px;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  // box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
   &.open {
     width: 130px; 
@@ -57,7 +57,7 @@
       padding: 15px 20px;
       text-align: center;
       &.active {
-        background: #020020;
+        background: #000000;
         padding: 4px 0 4px 0;
         border-radius: 4px;
         margin: -11px;
@@ -82,12 +82,12 @@
         width: 100%;
         margin: 2px;
         padding: 10px;
-        border-radius: 9px;
+        border-radius: 8px;
         font-size: 1.4rem;
 
         &:hover {
           color: #ffffff;
-          background: #020020;
+          background: #000000;
         }
 
         .fa-icon {
@@ -109,8 +109,9 @@
       font-size: auto;
 
       .bottom-dm2 {
-        background: red;
+        background: #E5252C;
         color: #ffffff;
+        border-radius: 8px;
       }
     }
   }
@@ -122,7 +123,7 @@
   }
   10%, 30%, 50%, 70%, 90% {
     transform: translateX(-2px);
-    color: #7bffff;
+    color: #ffffff;
   }
   20%, 40%, 60%, 80% {
     transform: translateX(2px);
@@ -135,3 +136,6 @@
 }
 
 // ====================Future===================
+
+
+

@@ -12,7 +12,7 @@ import dellXpsWhite from '../assets/dell-xps-13-white.png';
 import iphone11Blue from '../assets/iphone-12-pro-blue.png';
 import macbook from '../assets/macbook.png';
 import samsungNote21 from '../assets/samsung-note21.png';
-
+import '../App.css';
 const ProductList = () => {
     const navigate = useNavigate();
     const products = [
