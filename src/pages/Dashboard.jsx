@@ -1,14 +1,14 @@
 import React from 'react';
 import Sidebar from '../components/sidebar/Sidebar';
 import ProductList from '../components/ProductList';
-import Bag from '../components/Bag';
+import SideBag from '../components/SideBag';
 
 const Dashboard = () => {
     return (
         <>
             <Sidebar />
             <ProductList />
-            <Bag />
+            <SideBag />
         </>
     );
 };
