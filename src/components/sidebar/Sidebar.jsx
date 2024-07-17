@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faStore, faShoppingBag, faSignOutAlt, faBars } from '@fortawesome/free-solid-svg-icons';
 import { Link, useLocation } from 'react-router-dom';
 import './sidebar.scss';
-import logo from '../../assets/Logo.png';
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
