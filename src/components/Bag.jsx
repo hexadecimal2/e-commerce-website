@@ -1,13 +1,12 @@
 import React from "react";
-import ProductList from "./ProductList.jsx";
-import { useNavigate } from 'react-router-dom';
+import ProductList from "../ProductList.jsx";
+import {  useNavigate } from 'react-router-dom';
 import "./Sidebag.css"
-//Palesa's section with sidebag and bag.css
 
 export let myBag = [];
 let setMyBag = () => { };
 
-function Bag() {
+export default function Bag() {
     const [cartItems, setCartItems] = React.useState(myBag);
     myBag = cartItems;
     setMyBag = setCartItems;
@@ -41,10 +40,10 @@ function Bag() {
             </button>
         </div>
     );
-};
+}
 
 export function addToBag(productId) {
-    const product = data.products[productId];
+    const product = ProductList.find(p => p.id === productId);
     const index = myBag.findIndex((item) => item.id === productId);
     if (index >= 0) {
         myBag[index].quantity++;
@@ -57,15 +56,13 @@ export function addToBag(productId) {
 }
 
 export function decreaseQuantity(productId) {
-    const index = myBag.findIndex((item) => item.id === productId);
-    if (index >= 0) {
-        if (myBag[index].quantity > 1) {
-            myBag[index].quantity--;
-        } else {
-            myBag.splice(index, 1);
-        }
-        setMyBag([...myBag]);
-    }
-};
-
-export default Bag;
+    setMyBag((prevBag) => {
+        const updatedBag = prevBag.map((item) => {
+            if (item.id === productId && item.quantity > 0) {
+                return { ...item, quantity: item.quantity - 1 };
+            }
+            return item;
+        });
+        return updatedBag.filter((item) => item.quantity > 0);
+    });
+}

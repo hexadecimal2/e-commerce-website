@@ -1,12 +1,12 @@
 import React from "react";
-import ProductList from "./ProductList.jsx";
+import ProductList from "../ProductList.jsx"
 import { Link } from 'react-router-dom';
-import "./Sidebag.css"
+import './Sidebag.css';
 
 export let myBag = [];
 let setMyBag = () => { };
 
-function Sidebag() {
+export default function SideBag() {
     const [cartItems, setCartItems] = React.useState(myBag);
     myBag = cartItems;
     setMyBag = setCartItems;
@@ -36,7 +36,7 @@ function Sidebag() {
 };
 
 export function addToSideBag(productId) {
-    const product = data.products[productId];
+    const product = ProductList.find(p => p.id === productId);
     const index = myBag.findIndex((item) => item.id === productId);
     if (index >= 0) {
         myBag[index].quantity++;
@@ -46,6 +46,4 @@ export function addToSideBag(productId) {
         myBag.push(newProduct);
     }
     setMyBag([...myBag]);
-};
-
-export default Sidebag;
+}
