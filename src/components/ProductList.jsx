@@ -15,6 +15,7 @@ import macbook from '../assets/macbook.png';
 import samsungNote21 from '../assets/samsung-note21.png';
 import '../App.css';
 import { addToSideBag } from './Sidebag';
+import { addToBag } from './Bag';
 
 const ProductList = () => {
     const navigate = useNavigate();
@@ -149,6 +150,7 @@ const ProductList = () => {
 
     const handleAddToBag = (product) => {
         addToSideBag(product);
+        addToBag(product);
     };
 
     const filteredProducts = products.filter(product =>
