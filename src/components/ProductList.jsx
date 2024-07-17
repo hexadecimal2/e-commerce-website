@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import '../styles/ProductList.css';
-import { addToSideBag } from './SideBag.jsx';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -15,6 +14,8 @@ import iphone11Blue from '../assets/iphone-12-pro-blue.png';
 import macbook from '../assets/macbook.png';
 import samsungNote21 from '../assets/samsung-note21.png';
 import '../App.css';
+import { addToSideBag } from './Sidebag';
+
 const ProductList = () => {
     const navigate = useNavigate();
     const [searchQuery, setSearchQuery] = useState('');
