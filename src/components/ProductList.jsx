@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+import '../styles/ProductList.css';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -11,9 +13,11 @@ import dellXpsWhite from '../assets/dell-xps-13-white.png';
 import iphone11Blue from '../assets/iphone-12-pro-blue.png';
 import macbook from '../assets/macbook.png';
 import samsungNote21 from '../assets/samsung-note21.png';
-
+import '../App.css';
 const ProductList = () => {
     const navigate = useNavigate();
+    const [searchQuery, setSearchQuery] = useState('');
+
     const products = [
         {
             id: 1,
@@ -129,14 +133,30 @@ const ProductList = () => {
        navigate('/item-view', {state: {product} });
     };
 
+    const filteredProducts = products.filter(product =>
+        product.name.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
     return (
         <>
             <div className='container'>
+                <div className="search-bar mb-4 mx-auto" style={{ maxWidth: '50%' }}>
+                    <label className="search-label" htmlFor="search">Search Item</label>
+                    <input
+                        type="text"
+                        id="search"
+                        className="form-control"
+                        placeholder="Apple Watch, Samsung 21, Macbook Pro"
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                    />
+                </div>
             <div className='row'>
-                {products.map(product => (
-                    <div key={product.id} className='col-lg-3 col-md-4 col-sm-6 mb-4'>
-                        <div className='card border-none' style={ { backgroundColor: '#ededed' } } onClick={() => handleItemView(product)}>
-                            <img src={product.image} alt={product.name} className="bg-white bg-rounded mx-auto d-block" height='230' width='190' />
+                {filteredProducts.length > 0 ? (
+                filteredProducts.map(product => (
+                    <div key={product.id} className='col-lg-3 col-md-12 col-sm-12 mb-4'>
+                        <div className='card border-0 bg-transparent' onClick={() => handleItemView(product)}>
+                            <img src={product.image} alt={product.name} className="card-image mx-auto d-block" height='230' width='190' />
                             <div className="card-content d-flex flex-column">
                                 <div className="card-title">{product.name}</div>
                                 <div className="card-description">{product.smallDescription}</div>
@@ -149,7 +169,12 @@ const ProductList = () => {
                             </div>
                         </div>
                     </div>
-                ))}
+                ))
+                ) : (
+                    <div className="col-12">
+                        <p>No results</p>
+                    </div>
+                )}
             </div>
         </div>
         </>
