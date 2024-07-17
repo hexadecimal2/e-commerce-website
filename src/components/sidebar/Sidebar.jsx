@@ -27,9 +27,9 @@ const Sidebar = () => {
         <FontAwesomeIcon icon={isOpen ? faTimes : faBars} />
       </button>
       <ul>
-        <li className={isActive('/store') ? 'active' : ''}>
-          <Link to='/store'>
-            <FontAwesomeIcon icon={faStore} className={isActive('/store') ? 'rotate' : ''} />
+        <li className={isActive('/') ? 'active' : ''}>
+          <Link to='/'>
+            <FontAwesomeIcon icon={faStore} className={isActive('/') ? 'rotate' : ''} />
             {isOpen && <span>Store</span>}
           </Link>
         </li>
