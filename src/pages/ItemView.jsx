@@ -1,6 +1,6 @@
 import React from 'react';
 import Sidebar from '../components/sidebar/Sidebar';
-import Bag from '../components/Bag';
+import Bag from '../components/Sidebag';
 import { useLocation, Link } from 'react-router-dom';
 import '../pages/ItemView.css'
 import Rating from '../components/Rating'
