@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes, faStore, faShoppingBag, faSignOutAlt, faBars } from '@fortawesome/free-solid-svg-icons';
 import { Link, useLocation } from 'react-router-dom';
 import './sidebar.scss';
-import logo from '../../assets/Logo.png';
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,9 +27,9 @@ const Sidebar = () => {
         <FontAwesomeIcon icon={isOpen ? faTimes : faBars} />
       </button>
       <ul>
-        <li className={isActive('/store') ? 'active' : ''}>
-          <Link to='/store'>
-            <FontAwesomeIcon icon={faStore} className={isActive('/store') ? 'rotate' : ''} />
+        <li className={isActive('/') ? 'active' : ''}>
+          <Link to='/'>
+            <FontAwesomeIcon icon={faStore} className={isActive('/') ? 'rotate' : ''} />
             {isOpen && <span>Store</span>}
           </Link>
         </li>
