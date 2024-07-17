@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../styles/ProductList.css';
+import { addToSideBag } from './SideBag.jsx';
 import { useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -133,6 +134,10 @@ const ProductList = () => {
        navigate('/item-view', {state: {product} });
     };
 
+    const handleAddToBag = (product) => {
+        addToSideBag(product);
+    };
+
     const filteredProducts = products.filter(product =>
         product.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
@@ -162,7 +167,8 @@ const ProductList = () => {
                                 <div className="card-description">{product.smallDescription}</div>
                                 <div className="mt-auto d-flex justify-content-between align-items-center">
                                     <span className="card-price">$ {product.price}</span>
-                                    <button className='btn bg-dark'>
+                                    <button className='btn bg-dark' onClick={() =>
+                                        handleAddToBag(product)}>
                                         <i className='bi bi-bag-plus-fill' style={ {color: 'white'} }></i>
                                     </button>
                                 </div>
