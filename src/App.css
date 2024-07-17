@@ -46,11 +46,3 @@ background-color: #ededed;
 .vert-line{
   padding: 120px;
 }
-
-@media (max-width:1924px) {
-  body{
-    zoom: 75%;
-
-  }
-
-}
