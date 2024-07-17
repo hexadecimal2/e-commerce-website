@@ -40,7 +40,7 @@ background-color: #ededed;
   height: 1130px; /* Length of the line */
   background: rgb(139, 139, 139);
   position: relative;
-  right: 150px;
+  right: 130px;
   top: -150px;
 }
 .vert-line{
