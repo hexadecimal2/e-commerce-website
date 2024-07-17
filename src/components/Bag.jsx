@@ -1,5 +1,4 @@
 import React from "react";
-import ProductList from "./ProductList.jsx";
 import {  useNavigate } from 'react-router-dom';
 import "./Sidebag.css"
 
@@ -10,6 +9,7 @@ function Bag() {
     const [cartItems, setCartItems] = React.useState(myBag);
     myBag = cartItems;
     setMyBag = setCartItems;
+
     const total = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
     const navigate = useNavigate();
 
@@ -42,29 +42,25 @@ function Bag() {
     );
 }
 
-export function addToBag(productId) {
-    const product = ProductList.find(p => p.id === productId);
-    const index = myBag.findIndex((item) => item.id === productId);
+export function addToBag(product) {
+    const index = myBag.findIndex((item) => item.id === product.id);
     if (index >= 0) {
-        myBag[index].quantity++;
+        myBag[index] = { ...myBag[index], quantity: myBag[index].quantity + 1 };
     } else {
-        const newProduct = { ...product, quantity: 1, id: productId };
-        newProduct.price = parseFloat(newProduct.price.replace('$', ''));
-        myBag.push(newProduct);
+        myBag = [...myBag, { ...product, quantity: 1 }];
     }
     setMyBag([...myBag]);
 }
 
 export function decreaseQuantity(productId) {
-    setMyBag((prevBag) => {
-        const updatedBag = prevBag.map((item) => {
-            if (item.id === productId && item.quantity > 0) {
-                return { ...item, quantity: item.quantity - 1 };
-            }
-            return item;
-        });
-        return updatedBag.filter((item) => item.quantity > 0);
-    });
-};
+    const updatedBag = myBag.map((item) => {
+        if (item.id === productId && item.quantity > 1) {
+            return { ...item, quantity: item.quantity - 1 };
+        }
+        return item;
+    }).filter(item => item.quantity > 0);
+    
+    setMyBag(updatedBag);
+}
 
 export default Bag;
