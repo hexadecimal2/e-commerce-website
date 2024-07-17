@@ -6,7 +6,7 @@ import "./Sidebag.css"
 export let myBag = [];
 let setMyBag = () => { };
 
-export default function Bag() {
+function Bag() {
     const [cartItems, setCartItems] = React.useState(myBag);
     myBag = cartItems;
     setMyBag = setCartItems;
@@ -65,4 +65,6 @@ export function decreaseQuantity(productId) {
         });
         return updatedBag.filter((item) => item.quantity > 0);
     });
-}
+};
+
+export default Bag;
