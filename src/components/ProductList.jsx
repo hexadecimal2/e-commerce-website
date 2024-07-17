@@ -140,7 +140,7 @@ const ProductList = () => {
     return (
         <>
             <div className='container'>
-                <div className="search-bar mb-4">
+                <div className="search-bar mb-4 mx-auto" style={{ maxWidth: '50%' }}>
                     <label className="search-label" htmlFor="search">Search Item</label>
                     <input
                         type="text"
