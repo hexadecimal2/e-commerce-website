@@ -17,11 +17,7 @@ const Sidebar = () => {
   return (
     <div className={`sidenav ${isOpen ? 'open' : 'closed'}`}>
     <Link to='/' className='brand'>
-    <svg width="24" height="32" viewBox="0 0 24 32" fill="none" xmlns="http://www.w3.org/2000/svg" className='logo'>
-      <path fillRule="evenodd" clipRule="evenodd" d="M21.4874 1L9.76744 0.999999L8.24165 8.93076H7.24165L8.88014 0.414182H8.88119L8.95741 0.0180054L22.6737 0.0180083L22.5975 0.414182H22.6001L20.9616 8.93076H19.9616L21.4874 1Z" fill="#105E46"/>
-      <rect width="18.5019" height="22.2023" transform="matrix(1 0 -0.188924 0.981992 5.49811 9.66516)" fill="#12805D"/>
-      <rect width="18.5019" height="22.2023" transform="matrix(1 0 -0.188924 0.981992 4.19452 8.50879)" fill="#02D693"/>
-    </svg>
+    <img src='https://media.discordapp.net/attachments/1260921373090386020/1262906965294579722/TypeFlat.png?ex=6698f604&is=6697a484&hm=14461e80770ef3e6b1ac2eff0b494653c2d614f1d600b97beccd8c7b2bac6b99&' alt=''/>
   </Link>
       <button className="toggle-btn" onClick={toggleSidebar}>
         <FontAwesomeIcon icon={isOpen ? faTimes : faBars} />
