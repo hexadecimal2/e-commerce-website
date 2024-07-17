@@ -1,5 +1,5 @@
 import React from "react";
-import ProductList from "../ProductList.jsx"
+import ProductList from "./ProductList.jsx"
 import { Link } from 'react-router-dom';
 import './Sidebag.css';
 
