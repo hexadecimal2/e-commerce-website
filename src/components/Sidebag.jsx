@@ -36,8 +36,13 @@ function SideBag() {
     );
 };
 
-export function addToSideBag(product){
-    myBag = [...myBag, product];
+export function addToSideBag(product) {
+    const index = myBag.findIndex((item) => item.id === product.id);
+    if (index >= 0) {
+        myBag[index].quantity++;
+    } else {
+        myBag = [...myBag, { ...product, quantity: 1 }];
+    }
     setMyBag(myBag);
 };
 
