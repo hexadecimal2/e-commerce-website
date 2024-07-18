@@ -175,16 +175,16 @@ const ProductList = () => {
                 {filteredProducts.length > 0 ? (
                 filteredProducts.map(product => (
                     <div key={product.id} className='col-lg-3 col-md-12 col-sm-12 mb-4'>
-                        <div className='card border-0 bg-transparent' >
+                        <div className='card w-50 border-0 bg-transparent' >
                             <img src={product.image} alt={product.name} className="card-image mx-auto d-block" height='230' width='190' onClick={() => handleItemView(product)} />
                             <div className="card-content d-flex flex-column">
                                 <div className="card-title">{product.name}</div>
                                 <div className="card-description">{product.smallDescription}</div>
-                                <div className="mt-auto d-flex justify-content-between align-items-center">
+                                <div className="mt-auto d-flex action">
                                     <span className="card-price">$ {product.price}</span>
-                                    <button className='btn bg-dark' onClick={() =>
+                                    <button className='btn' onClick={() =>
                                         handleAddToBag(product)}>
-                                        <i className='bi bi-bag-plus-fill' style={ {color: 'white'} }></i>
+                                        <i className='bi bi-bag-plus-fill'></i>
                                     </button>
                                 </div>
                             </div>
