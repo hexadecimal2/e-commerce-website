@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Sidebag.css';
 
 export let myBag = [];
-let setMyBag = () => { };
+export let setMyBag = () => { };
 
 function SideBag() {
     const [cartItems, setCartItems] = React.useState(myBag);
