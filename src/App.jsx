@@ -5,11 +5,6 @@ import BagItems from './pages/CheckBagItems';
 import Checkout from './pages/Checkout'
 import AddPayment from './pages/AddPayment';
 import AddAddress from './pages/AddAddress';
-
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-
 import './App.css';
 
 function App() {
