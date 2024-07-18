@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Sidebag.css';
 
 export let myBag = [];
-let setMyBag = () => { };
+export let setMyBag = () => { };
 
 function SideBag() {
     const [cartItems, setCartItems] = React.useState(myBag);
@@ -12,6 +12,7 @@ function SideBag() {
 
     return (
         <div className="cart" style={{ backgroundColor: '#EAEAEA' }}>
+            <div className="line"></div>
             <h1 className="bag-title">Bag</h1>
             {cartItems.length === 0 ? (
                 <p>Your cart is empty.</p>
