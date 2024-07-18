@@ -1,14 +1,16 @@
 import React from "react";
-import {  useNavigate } from 'react-router-dom';
-import "./Sidebag.css"
+import { useNavigate } from 'react-router-dom';
+import "./Sidebag.css";
 
 export let myBag = [];
-let setMyBag = () => { };
+let setMyBag = () => {};
 
 function Bag() {
     const [cartItems, setCartItems] = React.useState(myBag);
-    myBag = cartItems;
-    setMyBag = setCartItems;
+
+    React.useEffect(() => {
+        setCartItems(myBag);
+    }, []);
 
     const total = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
     const navigate = useNavigate();
