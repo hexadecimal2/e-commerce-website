@@ -59,8 +59,8 @@
       &.active {
         background: #000000;
         padding: 4px 0 4px 0;
-        border-radius: 4px;
-        margin: -11px;
+        border-radius: 8px;
+        margin: 12px;
         font-family: "Nunito", sans-serif;
         font-optical-sizing: auto;
         font-weight: weight;
@@ -117,19 +117,19 @@
   }
 }
 
-@keyframes shake {
-  0%, 100% {
-    transform: translateX(0);
-  }
-  10%, 30%, 50%, 70%, 90% {
-    transform: translateX(-2px);
-    color: #ffffff;
-  }
-  20%, 40%, 60%, 80% {
-    transform: translateX(2px);
-    color: #fafafa;
-  }
-}
+// @keyframes shake {
+//   0%, 100% {
+//     transform: translateX(0);
+//   }
+//   10%, 30%, 50%, 70%, 90% {
+//     transform: translateX(-2px);
+//     color: #ffffff;
+//   }
+//   20%, 40%, 60%, 80% {
+//     transform: translateX(2px);
+//     color: #fafafa;
+//   }
+// }
 
 .rotate {
   animation: shake 10s linear infinite;
@@ -138,4 +138,9 @@
 // ====================Future===================
 
 
-
+.brand{
+padding: 20px;
+  img{
+    transform: scale(1.5);
+  }
+}
