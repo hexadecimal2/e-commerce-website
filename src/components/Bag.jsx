@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import "./Sidebag.css";
 
 export let myBag = [];
-let setMyBag = () => {};
+export let setMyBag = () => {};
 
 function Bag() {
     const [cartItems, setCartItems] = React.useState(myBag);

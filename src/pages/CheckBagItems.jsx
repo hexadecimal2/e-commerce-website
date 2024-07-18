@@ -1,8 +1,8 @@
 // BagItems.js
 import React from 'react';
-import { myBag, setMyBag } from '../components/Sidebag'; 
+// import { myBag, setMyBag } from '../components/Sidebag'; 
 import Sidebar from '../components/sidebar/Sidebar';
-import Bag from '../components/Bag';
+import Bag , {myBag, setMyBag}from '../components/Bag';
 import Rating from '../components/Rating';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../pages/CheckBagItems.css';
