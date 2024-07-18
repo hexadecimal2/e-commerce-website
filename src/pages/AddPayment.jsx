@@ -1,9 +1,18 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/AddPayment.css";
 import { FaLock } from 'react-icons/fa';
 
 export default function AddPayment() {
+  const navigate = useNavigate();
+
+  const handleAddPayment = (e) => {
+    e.preventDefault();
+    // Add your form validation or API call here
+    navigate("./Checkout.jsx"); // Redirect to the desired page
+  };
+
   return (
     <div className="container py-5 d-flex justify-content-center">
       <div className="row w-100">
@@ -23,8 +32,7 @@ export default function AddPayment() {
             </div>
           </div>
 
-          <form className="p-4 border rounded bg-light position-relative">
-
+          <form className="p-4 border rounded bg-light position-relative" onSubmit={handleAddPayment}>
             <h5 className="mb-4">Add a new Card</h5>
             <div className="mb-3">
               <label htmlFor="cardholderName" className="form-label">Cardholder Name</label>
@@ -54,13 +62,13 @@ export default function AddPayment() {
             <div className="position-absolute bottom-0 end-0 m-3">
               <a href="#!" className="back-link">Back</a>
             </div>
-              <div className="position-absolute bottom-0 start-0 m-3 d-flex align-items-center">
+            <div className="position-absolute bottom-0 start-0 m-3 d-flex align-items-center">
               <FaLock className="me-1" />
               <p className="secure-text text-muted mb-0">Secure Connection</p>
-            </div>
+            </div>
           </form>
         </div>
       </div>
-    </div>
-  );
+    </div>
+  );
 }
