@@ -15,7 +15,6 @@ import './App.css';
 function App() {
   return (
     <BrowserRouter>
-         <div className="App">
       <Routes>
         <Route path='/' element={<Dashboard />} />
         <Route path='/item-view' element={<ItemView />} />
@@ -24,7 +23,6 @@ function App() {
         <Route path='/payment' element={<AddPayment />} />
         <Route path='/address' element={<AddAddress />} />
       </Routes>
-      </div>
     </BrowserRouter>
   );
 }
